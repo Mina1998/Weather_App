@@ -10,7 +10,6 @@ async function getWeather() {
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName.value}&appid=${apiKey}&units=metric`;
     let data = await fetch(apiUrl);
     var response = await data.json();
-    console.log(data.status);
 
     if (data.status == 404){
         document.querySelector(".error").style.display = "block";
@@ -18,7 +17,7 @@ async function getWeather() {
     } else if (data.status == 200) {
         document.querySelector(".error").style.display = "none";
         document.querySelector(".weather").style.display = "block";
-        console.log(response);
+        // console.log(response);
         temp.innerHTML = `${Math.round(response.main.temp)}°C`;
         document.querySelector(".city").innerHTML = cityName.value.toUpperCase();
         wind.innerHTML = `${response.wind.speed}KM/H`;
