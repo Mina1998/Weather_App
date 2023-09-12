@@ -9,6 +9,14 @@ body {
     background-color: #222;
 }
 
+.error {
+    margin: 10px;
+    text-align: left;
+    color: red;
+    font-weight: bold;
+    display: none;
+}
+
 .card {
     width: 90%;
     max-width: 470px;
@@ -92,4 +100,8 @@ body {
 .weather .details .col img {
     width: 35px;
     height: 35px;
+}
+
+.weather {
+    display: none;
 }
